@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--html标签+属性-->
+<!--标签可分为  单标签和双标签-->
+<html lang="en">
+<head>
+    <!--h5的适配  name content-->
+    <meta charset="UTF-8"   name="viewport" content="width=device-width, initial-scale=1,   user-scalable=no"   >
+    <title>刘新港</title>
+    <!--用来加载外部资源时用的标签-->
+    <link rel="short icon" href="Resource/Resource/icon.png">
+    <link rel="stylesheet"  href="ExternalStyle.css">
+    <!--页内样式 运用的次数比较少的样式可以写在页内-->
+    <style>
+        ul{
+            display: table;         /*成行的标签*/
+            width: 100%;
+            background: white;
+            height: 85px;
+            margin-bottom: 8px;
+
+        }
+        ul li{
+            display: table-cell;    /*成列的标签*/
+            width: 33.3%;
+            vertical-align: middle;
+            text-align: center;
+        }
+        ul li span{
+            display: block;         /*内联标签不会独立成行，需要用 display：blcok使其独立*/
+        }
+        .DS_first_ul{
+            margin-top: -10px;
+        }
+    </style>
+
+
+</head>
+<body>
+<!--标题-->
+<!--span用来存放少量文字的标签-->
+<!--语义化标签:标签本身没有专门的含义，主要用于增强程序的可读性  header/section/footer-->
+<header>
+    <span>小滴服务</span>
+</header>
+<!--轮播图部分-->
+<!--img用来展示图片 -->
+<section    class="DS_first_section">
+    <img src="Resource/Resource/banner-1.png" alt="图片加载失败">
+
+    <script>
+        var imgNum = 1;
+        var bannerImg = document.getElementById("bannerImg");
+        function (){
+            imgNum++;
+            if (imgNum>3){
+                imgNum = 1;
+            }
+            bannerImg.src = "Resource/Resource/banner-" + imgNum + ".png";
+        }
+    </script>
+</section>
+
+<!--组件部分-->
+<section>
+    <ul class="DS_first_ul">
+        <li> <img src="Resource/Resource/index1.png">   <span>企业项目</span></li>
+        <li> <img src="Resource/Resource/index2.png">   <span>平台风采</span></li>
+        <li> <img src="Resource/Resource/index3.png">   <span>报名流程</span></li>
+    </ul>
+
+    <ul>
+        <li> <img src="Resource/Resource/index4.png">   <span>客户管理</span></li>
+        <li> <img src="Resource/Resource/index5.png">   <span>财务管理</span></li>
+        <li> <img src="Resource/Resource/index6.png">   <span>新闻公告</span></li>
+    </ul>
+
+    <ul>
+        <li> <img src="Resource/Resource/index7.png">   <span>工程案例</span></li>
+        <li> <img src="Resource/Resource/index8.png">   <span>修改密码</span></li>
+        <li> <img src="Resource/Resource/index9.png">   <span>会员注册</span></li>
+    </ul>
+</section>
+
+<!--底面操作栏-->
+<footer>
+
+    <a href="DropletService.html"> <img src="Resource/Resource/nav11.png" alt=""> <span  style="color: red">小滴服务</span> </a>
+    <a href="BusinessProject.html"> <img src="Resource/Resource/nav20.png" alt=""> <span>企业项目</span> </a>
+    <a href="ServiceProcess.html"> <img src="Resource/Resource/nav30.png" alt=""> <span>服务流程</span> </a>
+    <a href="PlatformMien.html"> <img src="Resource/Resource/nav40.png" alt=""> <span>平台风采</span> </a>
+    <a href="MyDroplet.html"> <img src="Resource/Resource/nav50.png" alt=""> <span>我的小滴</span> </a>
+
+</footer>
+</body>
+</html>
